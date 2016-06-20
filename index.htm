@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>赵宽的个人网站||前端工程师</title>
+<link rel="stylesheet" href="styles/main.css" tppabs="http://csdhui.com/styles/main.css" type='text/css'/>
+<link rel="stylesheet" href="styles/content_jl.css" tppabs="http://csdhui.com/styles/content_jl.css" type='text/css'/>
+<style>
+#opus a{ width:80px; height:40px; text-align:center; line-height:40px; background:-webkit-linear-gradient(#C33,#C63); font-size:15px; font-family:微软雅黑; font-weight:bold; color:#fff; box-shadow:0 10px 5px #000, inset 0 0 10px #fff; text-shadow:2px 2px 5px #000; -webkit-transition:.3s all ease; border-radius:10px;}
+#opus .prev{ position:absolute; left:50%; margin-left:-100px;}
+#opus .next{ position:absolute; left:50%;}
+#opus a:hover{box-shadow:0 10px 5px #000, inset 0 0 30px #fff;}
+
+#opus .box{width:300px; height:300px; margin:100px auto; position:relative; -webkit-transform-style:preserve-3d;}
+#opus .box li{position:absolute; top:0; left:0; width:100%; height:100%; text-align:center; line-height:300px; background:#399; opacity:0; font-size:30px; border:1px solid #000; -webkit-transition:1s all ease; cursor:pointer;}
+#opus .box .l2{opacity:0; -webkit-transform: perspective(800px) translate(-260px,0) rotateY(60deg);}
+#opus .box .l1{opacity:0.75; -webkit-transform: perspective(800px) translate(-200px,0) rotateY(60deg);}
+#opus .box .cur{opacity:1;}
+#opus .box img{ width:300px; height:300px; background-size:100%;}
+#opus .box .r1{opacity:0.75; -webkit-transform: perspective(800px) translate(200px,0) rotateY(-60deg);}
+#opus .box .r2{opacity:0; -webkit-transform: perspective(800px) translate(260px,0) rotateY(-60deg);}
+</style>
+<script src="scripts/jquery.js" tppabs="http://csdhui.com/scripts/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+	function loading(lad){
+			$(".loading span").animate({width:lad},1000,function(){
+				if(lad=="100%"){
+					$(".loading").hide();
+					$("#header").animate({"height":"150px"},1000);
+					setTimeout(function(){
+						$("#header nav").show(1000);
+					},1000)
+					$(".logo_1").animate({"top":"10px"},1000);
+					$("#header").siblings("div").show();
+					}
+			})
+		}
+	$(function(){
+		$("#about_me").mousemove(function(e){
+			var y=e.pageY;
+			var x=e.pageX;
+			var yy_3=Math.ceil(y/20);
+			var xx_3=Math.ceil(x/20);
+			var yy=Math.ceil(y/30);
+			var xx=Math.ceil(x/30);
+			var yy_4=Math.ceil(y/20);
+			var xx_4=Math.ceil(x/20);
+			$(".xh_2").css({
+				"top":yy_3,
+				"left":xx_3
+			})
+			$(".xh_3").css({
+				"top":yy_3,
+				"left":xx_3
+			})
+			$(".xh_1").css({
+				"top":yy,
+				"left":xx
+			})
+			$(".xh_4").css({
+				"top":yy_4,
+				"left":xx_4
+			})
+		})
+	})
+	window.onload=function(){
+		var oPrev = document.querySelector('.prev');
+		var oNext = document.querySelector('.next');
+		var oBox = document.querySelector('.box');
+		var aLi = oBox.children;
+		
+		var aClass = [];
+		for(var i=0;i<aLi.length;i++){
+			aClass[i] = aLi[i].className;
+			
+		}
+		//alert(aClass);
+		var bOk = false;
+		oNext.onclick=function(){
+			if(bOk)return;
+			bOk = true;
+			aClass.unshift(aClass.pop());
+			tab();
+		};
+		oPrev.onclick=function(){
+			if(bOk)return;
+			bOk = true;
+			aClass.push(aClass.shift());
+			tab();
+		};
+		function tab(){
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].className=aClass[i];
+			}
+			var oCur = document.querySelector('.cur');
+			
+			function tranEnd(){
+				oCur.addEventListener('transitionend',tranEnd,false);
+				bOk = false;
+			}
+			oCur.addEventListener('transitionend',tranEnd,false);
+		}
+		for(var i=0;i<aLi.length;i++){
+			aLi[0].onclick=function(){
+				window.open('text/css3-简易时钟8.html');		
+			};
+			aLi[1].onclick=function(){
+				window.open('text/7穿墙.html');		
+			};
+			aLi[2].onclick=function(){
+				window.open('text/css3-3D图片环5.html');		
+			};
+			aLi[3].onclick=function(){
+				window.open('text/灵魂回响/灵魂回响.html');		
+			};
+			aLi[4].onclick=function(){
+				window.open('text/官网分页效果3.html');		
+			};	
+			aLi[5].onclick=function(){
+				window.open('text/css3-爆炸效果5.html');		
+			};	
+		}
+	};
+</script>
+<script src="scripts/jl.js" tppabs="http://csdhui.com/scripts/jl.js" type="text/javascript"></script>
+   <script type="text/javascript">loading('5%');</script>
+</head>
+<body>
+	<div id='bg'>
+		<header id='header'>
+			<h1 class="logo_1"><a href='#' title='沉睡的熊猫'>熊辉</a></h1>
+			<nav>
+				<a href='#header'>首页</a>
+				<a href='#about_me'>关于我</a>
+				<a href='#content'>履历</a>
+				<a href='#opus'>我的作品</a>
+				<a href='#call_me'>联系我</a>
+			</nav>
+			<div class='loading'>
+				<span><img src="imgs/jdt.gif" tppabs="http://csdhui.com/imgs/jdt.gif"></span>
+			</div>
+		</header>
+		<script type="text/javascript">loading('20%');</script>
+		<div id='about_me'>
+			<div class='about_xh'>
+				<img class='renwu' src="imgs/banner/renwu.png" tppabs="http://csdhui.com/imgs/banner/renwu.png"/>
+				<div class='xh_bg xh_1'>
+					<img src="imgs/banner/beijing.png" tppabs="http://csdhui.com/imgs/banner/beijing.png"/>
+				</div>
+				<div class='xh_bg xh_2'>
+					<div class='xh_geren'>
+						<h3>个人简介</h3>
+						<p>生命不息&nbsp;学习不止<br/>赵宽&nbsp;前段工程开发师<br/>25岁&nbsp;itakuan@sina.com</p>
+					</div>
+				</div>
+				<div class='xh_bg xh_3'>
+					<div class='xh_jingli'>
+						<h3>职业经历</h3>
+						<p>北京七麦科技股份有限公司&nbsp; 技术组员</p>
+					</div>
+				</div>
+				<div class='xh_guang xh_4'>
+				</div>
+			</div>
+		</div>
+		<div id='content'>
+			<ul class='ct_tb'>
+					<li><a ><img src="imgs/wai_2.png" tppabs="http://csdhui.com/imgs/wai_2.png"/></a><p>关于我</p></li>
+					<li><a class='qidong'><img src="imgs/wai_3.png" tppabs="http://csdhui.com/imgs/wai_3.png"/></a><p>专业技能</p></li>
+					<li><a ><img src="imgs/wai_4.png" tppabs="http://csdhui.com/imgs/wai_4.png"/></a><p>我的经历</p></li>
+			</ul>
+			<div class='content_jl'>
+				<ul class='ct_jl'>
+					<li class="jl_gyw">
+						<div class="gyw_tu">
+							<ul>
+								<li class='xueli'><a ><img src="imgs/y1.png" tppabs="http://csdhui.com/imgs/y1.png"/><p>学历&#12288专科</p></a></li>
+								<li class='nianling'><a ><img src="imgs/y2.png" tppabs="http://csdhui.com/imgs/y2.png"/><p>年龄&#12288 25岁</p></a></li>
+								<li class='zuobiao'><a ><img src="imgs/y3.png" tppabs="http://csdhui.com/imgs/y3.png"/><p>暂住地&#12288北京</p></a></li>
+								<li class='zhuangtai'><a ><img src="imgs/y4.png" tppabs="http://csdhui.com/imgs/y4.png"/><p>状态&#12288未入职</p></a></li>
+							</ul>
+						</div>
+						<div class='gyw_wen'>
+							<p>2014年毕业于宣化科技职业学院</p>
+							<p>建筑工程技术，在学校期间就对网页的动态效果着迷，就开始自学。</p>
+							<p>毕业后，开始在工作之余钻研web前端技术，日新月异</p>
+							<p>的前沿技术和自由的框架即让我头疼又让我兴奋。</p>
+                            <p>后来在智能社学习。</p>
+							<p>从此----世界向我敞开新的大门！</p>
+						</div>
+					</li>
+					<li class='jl_zy'>
+						<div class='zy_wen'>
+							<h3>专业技能</h3>
+							<p>IT行业的学习需要持之以恒，知识深度与广度都很重要。而前端开发的重中之重就是原生javascript的理解，
+							一直都在不断琢磨《javascript高级程序设计》这本书来内化自己。另外还在不断学习新的知识，如angular，
+							nodeJs等等。</p>
+						</div>
+						<div class='zy_tu'>
+							<div class='zy_tu_1'>
+								<ul>
+									<li><a >PHOTOSHOP</a>
+										<div class='tu_ps'>
+											<div><span id='ps'>90</span>%</div>
+										</div>
+										<img src="imgs/sanjiao.png" tppabs="http://csdhui.com/imgs/sanjiao.png" class='xuanzhuan'/>
+									</li>
+									<li><a >JAVASCRIPT</a>
+										<div class='tu_js'>
+											<div><span id='js'>70</span>%</div>
+										</div>
+										<img src="imgs/sanjiao.png" tppabs="http://csdhui.com/imgs/sanjiao.png"/>
+									</li>
+									<li><a >HTML</a>
+										<div class='tu_hl'>
+											<div><span id='hl'>90</span>%</div>
+										</div>
+										<img src="imgs/sanjiao.png" tppabs="http://csdhui.com/imgs/sanjiao.png"/>
+									</li>
+									<li><a >CSS</a>
+										<div class='tu_css'>
+											<div><span id='css'>90</span>%</div>
+										</div>
+										<img src="imgs/sanjiao.png" tppabs="http://csdhui.com/imgs/sanjiao.png"/>
+									</li>
+								</ul>	
+							</div>
+							<div class='zy_tu_2'>
+								<ul>
+									<li >
+										<p> ·熟练掌握ps的使用<br/>
+											·熟悉各种切图、尺寸规范<br/>
+											·能独立制作完整的页面及优秀的海报图<br/>
+											·有较好的审美观念及色彩搭配感
+										</p>
+									</li>
+									<li style="display:none;">
+										<p> ·掌握jQuery库<br/>
+											·掌握ajax的运作原理及json数据结构<br/>
+										   · 注重JavaScript性能优化<br/>
+											·正在不断学习原生JavaScript，了解js闭包等
+										</p>
+									</li>
+									<li style="display:none;">
+										<p>     ·深刻理解Web标准<br/>
+												·熟练运用html标签<br/>
+												·熟悉html标记语言<br/>
+											   	·可以用html5做一些小效果。
+										</p>
+									</li>
+									<li style="display:none;">
+										<p> ·熟练运用css及css3新属性<br/>
+											·注重浏览器兼容性，熟悉常见的css hack（兼容至IE8）<br/>
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class='jl_wd' style='display:none'>
+						<div class='wd_wen'>
+							<h3>北京七麦科技股份有限公司</h3>
+							<p>2013年毕业之后开始踏上前端的自学之旅</p>
+						</div>
+						<div class='wd_tu'>
+							<div id='tu_wen' class='tu_wen'>
+								<h4>2015年2月~2016年5月</h4>
+								<p>·技术部<br/>
+									·负责页面切图制作<br/>
+									·ajax数据交互和javascript实现动态效果<br/>
+								</p>
+							</div>
+							<img src="imgs/wd_tu.png" tppabs="http://csdhui.com/imgs/wd_tu.png"/>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">loading('60%');</script>
+		<div id="opus">
+            <a href="javascript:;" class="prev">上一个</a>
+            <a href="javascript:;" class="next">下一个</a>
+			<ul class="box">
+                <li class="cur">
+                    <img src="img/clock.png" />
+                </li>
+                <li class="r1">
+                	<img src="img/wear.png" />
+                </li>
+                <li class="r2">
+                	<img src="img/surround.png" />
+                </li>
+                <li>
+                	<img src="img/webpage.png" />
+                </li>
+                <li class="l2">
+                	<img src="img/paging.png" />
+                </li>
+                <li class="l1">
+                	<img src="img/blast.png" />
+                </li>
+            </ul>
+		</div>        
+		<script type="text/javascript">loading('80%');</script>
+		<div id='call_me'>
+			<div class='me'>
+				<div class='tou'>
+					<img src="imgs/photo.JPG"/>
+				</div>
+				<div class='wen'>
+					<p><b>联系方式：</b></p>
+					<p>Email：<a href=''>itakuan@sina.com</a></p>
+					<p>电话：18513148850</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">loading('100%');</script>
+</body>
+</html>

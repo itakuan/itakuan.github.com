@@ -1,0 +1,105 @@
+/*content*/
+	#content{display:none;background:url("../imgs/bg1.jpg"/*tpa=http://csdhui.com/imgs/bg1.jpg*/) 0 0 repeat;width:100%;padding:50px 0;position:relative;height:450px;}
+	.content_jl{width:990px;margin:30px auto;position:relative;overflow:hidden;height:400px;}
+	.ct_tb{position:absolute;top:150px;left:50px;}
+	.ct_tb li{margin:15px 0;overflow:hidden;width:150px;}
+	.ct_tb li img{display:block;width:38px;float:left;filter:grayscale(1);
+						-ms-filter:grayscale(1);
+						-moz-filter:grayscale(1);
+						-webkit-filter:grayscale(1);}
+	.ct_tb li p{float:left;line-height:55px;margin-left:5px;display:none;}
+	.ct_tb li img:hover{filter:grayscale(0);-ms-filter:grayscale(0);-moz-filter:grayscale(0);
+						-webkit-filter:grayscale(0);}
+	
+	/*基本资料*/
+	.jl_gyw{margin-left:140px;}
+	.gyw_tu{overflow:hidden;float:left;}
+	.gyw_tu ul{float:left;margin-left:20px;}
+	.gyw_tu ul li{float:left;width:140px;height:128px;margin-left:20px;}
+	.gyw_tu ul li img{margin:5px 0 10px 1px;}
+	.gyw_tu ul li p{color:white;}
+	.gyw_tu ul li a{display:block;width:140px;text-align:center;}
+	.gyw_tu .xueli{background:#35acd4;}
+	.gyw_tu .nianling{background:#fa7e28;}
+	.gyw_tu .zuobiao{background:#ffa22b;}
+	.gyw_tu .zhuangtai{background:#7ccdc4;}
+	.gyw_wen{margin-top:50px;float:left;line-height:30px;padding:30px 60px;position:relative;width:600px;}
+	.gyw_wen p{color:white;font-size:18px;}
+	.gyw_wen:after{
+		border-left:white solid 2px;
+		border-top:white solid 2px;
+		left:0;
+		top:0;
+	}
+	.gyw_wen:before{
+		border-right:white solid 2px;
+		border-bottom:white solid 2px;
+		right:0;
+		bottom:0;
+	}
+	.gyw_wen:before,.gyw_wen:after{
+		content:'';
+		width:50px;
+		height:50px;
+		position:absolute;
+	}
+	
+	/*专业技能*/
+	.jl_zy{display:none;}
+	.zy_wen{text-align:center;}
+	.zy_wen h3{color:white;font-size:26px;margin-bottom:10px;}
+	.zy_wen p{color:white;line-height:30px;overflow:hidden;}
+	.zy_tu{margin:40px 0 0 100px;}
+	.zy_tu_1{float:left;padding:5px 30px;}
+	.zy_tu_1 ul li{width:350px;height:50px;position:relative;}
+	.zy_tu_1 ul li a{font-size:12px;color:white;line-height:32px;}
+	.zy_tu_1 ul li div,.zy_tu_1 span{color:white;font-size:10px;}
+	.zy_tu_1 ul li>div{width:308px;height:18px;background:white;}
+	.zy_tu_1 ul li>div div{text-align:right;background:#25ad8b;height:18px;}
+	.zy_tu_1 ul li img{position:absolute;right:0;bottom:0;cursor:pointer;
+						transform:rotate(180deg);
+						-ms-transform:rotate(180deg); 	/* IE 9 */
+						-moz-transform:rotate(180deg); 	/* Firefox */
+						-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+						transition:all 1s;
+						-ms-transition:all 1s;
+						-moz-transition:all 1s;
+						-webkit-transition:all 1s;}
+	.zy_tu_1 ul li .xuanzhuan{transform:rotate(360deg);transition:all 1s;
+								-ms-transform:rotate(360deg);-ms-transition:all 1s;
+								-moz-transform:rotate(360deg);-moz-transition:all 1s;
+								-webkit-transform:rotate(360deg);-webkit-transition:all 1s;}
+	.zy_tu_2{float:left;margin:25px 0 0 30px;}
+	.zy_tu_2 ul{position:relative;}
+	.zy_tu_2 ul li{width:280px;border-radius:5%;background:rgba(94,175,155,0.7);padding:15px;position:absolute;left:0;top:0;}
+	.zy_tu_2 ul li p{color:white;line-height:30px;font-size:17px;}
+	
+	/*我的经历*/
+	.jl_wd{display:none;position:relative;}
+	.wd_wen{text-align:center;}
+	.wd_wen h3{font-size:26px;color:white;margin-bottom:10px;}
+	.wd_wen p{color:white;line-height:30px;}
+	.wd_tu{width:750px;height:330px;position:relative;margin:30px auto 0;}
+	.wd_tu .tu_wen{position:absolute;top:60px;left:40px;}
+	.wd_tu h3{font-size:30px;color:white;}
+	.wd_tu h4{font-size:16px;color:white;margin-left:10px;}
+	.wd_tu p{color:white;line-height:30px;}
+	.wd_tu img{right:0;top:50px;position:absolute;}
+	.jiantou{}
+	.jiantou span{cursor:pointer;top:130px;position:absolute;display:block;width:35px;height:35px;background:url("../imgs/jl_wd_jiantou.png"/*tpa=http://csdhui.com/imgs/jl_wd_jiantou.png*/) 0 0 no-repeat;}
+	.jiantou .jt_1{left:10px;opacity:0.4;}
+	.jiantou .jt_2{right:10px;background-position:-35px 0;opacity:0.4;}
+	.jiantou span:hover{opacity:1;}
+	
+	/*我的作品*/
+	#opus{width:100%;background:url("../imgs/bg_hong.jpg"/*tpa=http://csdhui.com/imgs/bg_hong.jpg*/) 0 0 repeat;padding:50px 0; position:relative; text-align:center;}
+	
+	
+	/*联系我*/
+	#call_me{width:100%;background:url("../imgs/bg_huang.jpg"/*tpa=http://csdhui.com/imgs/bg_huang.jpg*/) 0 0 repeat;padding:50px 0;display:none;}
+	.me{width:990px;margin:0 auto;overflow:hidden;}
+	#call_me .tou{float:left;margin-left:100px;width:240px;height:240px;border-radius:50%;box-shadow:3px 3px 3px #514845;border:8px solid white;overflow:hidden; background-size:100%;}
+	#call_me .wen{float:left;color:#4b4d4c;font-size:18px;line-height:30px;margin:30px 0 0 100px;}
+	#call_me .wen a{font-size:18px;color:#4b4d4c;}
+	#call_me .weixin{float:left;margin:40px 0 0 30px;text-align:center;}
+	.qq{cursor:pointer;}

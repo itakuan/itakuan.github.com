@@ -1,0 +1,31 @@
+/*header*/
+*{padding:0;margin:0;}
+	body,html{font-size:100%;height:100%;min-width:1340px;}
+	body{ background:#ffcf05;}
+	#bg{width:100%;overflow:hidden;}
+	a{text-decoration:none;color:white;}
+	li{list-style:none;}
+	#header{z-index:9999;position:absolute;left:0;top:0;height:100%;width:100%;background:#ffcf05 url("../imgs/bg.png"/*tpa=http://csdhui.com/imgs/bg.png*/) repeat-x left bottom;}
+	#header nav{display:none;position:fixed;top:40px;right:20px;border-radius:20px;background:#ffcf05;z-index:9999;padding:5px 0 5px 12px;overflow:hidden;}
+	#header nav a:after{color:#888;content:'/';margin:0 8px 0 8px;}
+	#header nav a{color:#171301;}
+	
+	.logo_1{margin:0 auto;position:relative;top:200px;background:url("../imgs/logo.png"/*tpa=http://csdhui.com/imgs/logo.png*/) 0 0 no-repeat;width:181px;height:110px;text-indent:-9999px;}
+	.loading{width:400px;margin:0 auto;position:relative;top:250px;}
+	.loading span{overflow:hidden;width:0;display:block;}
+	
+	#about_me{display:none;background-image:url("../imgs/banner.jpg"/*tpa=http://csdhui.com/imgs/banner.jpg*/);
+			  background-color:#060e21; background-repeat:no-repeat;
+			  background-position:center top;height:550px;position:relative;margin-top:150px;}
+	.about_xh{width:1440px;margin:0 auto;position:relative;height:550px;overflow:hidden;}
+	.about_xh .renwu{position:absolute;z-index:800;left:550px;top:50px;}
+	.about_xh .xh_bg{width:100%;height:100%;position:absolute;z-index:700;}
+	.about_xh .xh_bg img{margin:0px 0 0 130px;}
+	.xh_geren{width:250px;margin:290px 0 0 80px;}
+	.xh_geren h3{text-indent:-9999px;background:url("../imgs/banner/geren.png"/*tpa=http://csdhui.com/imgs/banner/geren.png*/) 0 0 no-repeat;line-height:45px;}
+	.xh_geren p,.xh_jingli p{font-size:17px;color:white;line-height:25px;margin-left:15px;margin-top:8px;}
+	.xh_jingli{width:260px;float:right;margin:50px 200px 0 0;}
+	.xh_jingli h3{text-indent:-9999px;background:url("../imgs/banner/zhiye.png"/*tpa=http://csdhui.com/imgs/banner/zhiye.png*/) 0 0 no-repeat;line-height:45px;}
+	.xh_guang{width:100%;height:100%;position:absolute;z-index:900;background:url("../imgs/banner/guang.png"/*tpa=http://csdhui.com/imgs/banner/guang.png*/) 0 0 no-repeat;}
+	
+	
